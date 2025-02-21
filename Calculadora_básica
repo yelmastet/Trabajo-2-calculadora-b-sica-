@@ -1,0 +1,26 @@
+"""
+Ejercicio 1
+David Torres
+20/02/25
+"""
+###inicio de codigo
+#Recopilar los operandos
+
+operando_a=int(input("Escriba un número entero: "))
+operando_b=int(input("Escriba otro número entero: "))
+resultado_suma=operando_a+operando_b
+resultado_resta=operando_a-operando_b
+resultado_multiplicación=operando_a*operando_b
+resultado_división=operando_a/operando_b
+resultado_potenciación=operando_a**operando_b
+
+#Mostrar el resultado en pantalla
+
+print(f"la suma de {operando_a} y {operando_b} es {resultado_suma}")
+print(f"la resta de {operando_a} y {operando_b} es {resultado_resta}")
+print(f"la multiplicación de {operando_a} y {operando_b} es {resultado_multiplicación}")
+print(f"la división de {operando_a} y {operando_b} es {resultado_división}")
+print(f"la potenciación de {operando_a} y {operando_b} es {resultado_potenciación}")
+
+###final del codigo
+
