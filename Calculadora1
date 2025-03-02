@@ -1,0 +1,101 @@
+"""
+Calculadora simple para realizar operaciones básicas
+como suma, resta, multiplicación y división.
+"""
+
+def sumar(a, b):
+    """
+    Suma dos números.
+
+    Args:
+        a (float): Primer número.
+        b (float): Segundo número.
+
+    Returns:
+        float: Resultado de la suma de a y b.
+    """
+    return a + b
+
+
+def restar(a, b):
+    """
+    Resta dos números.
+
+    Args:
+        a (float): Primer número.
+        b (float): Segundo número.
+
+    Returns:
+        float: Resultado de la resta de a y b.
+    """
+    return a - b
+
+
+def multiplicar(a, b):
+    """
+    Multiplica dos números.
+
+    Args:
+        a (float): Primer número.
+        b (float): Segundo número.
+
+    Returns:
+        float: Resultado de la multiplicación de a y b.
+    """
+    return a * b
+
+
+def dividir(a, b):
+    """
+    Divide dos números. Si el divisor es 0, devuelve un mensaje de error.
+
+    Args:
+        a (float): Numerador.
+        b (float): Denominador.
+
+    Returns:
+        float or str: Resultado de la división o mensaje de error si b es 0.
+    """
+    if b == 0:
+        return "Error: División por cero"
+    return a / b
+
+
+def calculadora():
+    """
+    Función principal de la calculadora, que solicita al usuario
+    seleccionar una operación y luego realiza el cálculo.
+    """
+    print("Selecciona la operación:")
+    print("1. Sumar")
+    print("2. Restar")
+    print("3. Multiplicar")
+    print("4. Dividir")
+
+    # Ingresar la elección de operación
+    operacion = input("Ingresa el número de la operación (1/2/3/4): ")
+
+    # Ingresar los dos números
+    try:
+        num1 = float(input("Ingresa el primer número: "))
+        num2 = float(input("Ingresa el segundo número: "))
+    except ValueError:
+        print("Error: Debes ingresar números válidos.")
+        return
+
+    # Realizar la operación seleccionada
+    if operacion == '1':
+        print(f"{num1} + {num2} = {sumar(num1, num2)}")
+    elif operacion == '2':
+        print(f"{num1} - {num2} = {restar(num1, num2)}")
+    elif operacion == '3':
+        print(f"{num1} * {num2} = {multiplicar(num1, num2)}")
+    elif operacion == '4':
+        print(f"{num1} / {num2} = {dividir(num1, num2)}")
+    else:
+        print("Operación no válida")
+
+
+# Llamar a la calculadora (esto solo debe ejecutarse cuando se ejecuta este archivo)
+if __name__ == "__main__":
+    calculadora()
